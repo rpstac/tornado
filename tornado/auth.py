@@ -54,7 +54,7 @@ import urllib
 import urlparse
 import uuid
 
-from tornado import httpclient
+from tornado import httpclient, httputil
 from tornado import escape
 from tornado.httputil import url_concat
 from tornado.util import bytes_type, b
@@ -1106,7 +1106,7 @@ class LinkedInMixin(OAuthMixin):
     _OAUTH_ACCESS_TOKEN_URL  = "https://api.linkedin.com/uas/oauth/accessToken"
     _OAUTH_AUTHORIZE_URL     = "https://www.linkedin.com/uas/oauth/authorize"
     _OAUTH_AUTHENTICATE_URL  = "https://www.linkedin.com/uas/oauth/authenticate"
-    _OAUTH_VERSION           = "1.0a"
+    _OAUTH_VERSION           = "1.0"
     _OAUTH_NO_CALLBACKS      = False
     _DEFAULT_USER_FIELDS     = "(id,first-name,last-name,headline,industry," + \
          "positions,educations,summary,picture-url)"
